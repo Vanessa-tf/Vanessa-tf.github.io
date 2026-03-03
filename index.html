@@ -56,17 +56,6 @@
             overflow: hidden;
         }
         
-        .sidebar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
-            opacity: 0.3;
-        }
-        
         .main-content {
             padding: 40px;
             background: var(--dark);
@@ -102,19 +91,6 @@
             object-fit: cover;
         }
         
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        
-        .profile-img::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
-            border-radius: 50%;
-        }
-        
         h1 {
             font-size: 1.8em;
             margin-bottom: 8px;
@@ -133,8 +109,6 @@
         
         .sidebar-section {
             margin-bottom: 35px;
-            position: relative;
-            z-index: 1;
         }
         
         .sidebar-section h3 {
@@ -148,27 +122,12 @@
             align-items: center;
         }
         
-        .sidebar-section h3::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-            margin-left: 15px;
-        }
-        
         .contact-item {
             margin-bottom: 15px;
             font-size: 0.95em;
             display: flex;
             align-items: flex-start;
-            line-height: 1.5;
-            transition: var(--transition);
             padding: 8px 10px;
-            border-radius: 5px;
-        }
-        
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.05);
         }
         
         .contact-item i {
@@ -179,66 +138,24 @@
             margin-top: 3px;
         }
         
-        .contact-item a {
-            color: var(--light);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+        .contact-item a { color: var(--light); text-decoration: none; }
         
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-        
-        .skill-list {
-            list-style: none;
-        }
-        
+        .skill-list { list-style: none; }
         .skill-list li {
             margin-bottom: 12px;
             font-size: 0.95em;
-            padding-left: 0;
-            position: relative;
             display: flex;
-            align-items: center;
-            transition: var(--transition);
+            align-items: flex-start;
             padding: 8px 10px;
-            border-radius: 5px;
-        }
-        
-        .skill-list li:hover {
-            background: rgba(255, 255, 255, 0.05);
         }
         
         .skill-list li::before {
             content: "▹";
             margin-right: 10px;
             color: var(--primary);
-            font-weight: bold;
         }
         
-        .skill-level {
-            margin-left: auto;
-            font-size: 0.8em;
-            color: var(--gray);
-        }
-        
-        .main-section {
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: slideIn 0.6s ease forwards;
-        }
-        
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        .main-section:nth-child(1) { animation-delay: 0.1s; }
-        .main-section:nth-child(2) { animation-delay: 0.2s; }
-        .main-section:nth-child(3) { animation-delay: 0.3s; }
-        .main-section:nth-child(4) { animation-delay: 0.4s; }
-        .main-section:nth-child(5) { animation-delay: 0.5s; }
-        .main-section:nth-child(6) { animation-delay: 0.6s; }
+        .main-section { margin-bottom: 40px; }
         
         .main-section h2 {
             color: var(--primary);
@@ -250,85 +167,40 @@
             align-items: center;
         }
         
-        .main-section h2 i {
-            margin-right: 12px;
-            font-size: 1.2em;
-        }
-        
-        .about {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #ccc;
-        }
+        .main-section h2 i { margin-right: 12px; }
         
         .experience-item, .project-item {
             margin-bottom: 30px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
-            transition: var(--transition);
             border-left: 3px solid transparent;
+            transition: var(--transition);
         }
         
         .experience-item:hover, .project-item:hover {
             background: rgba(255, 255, 255, 0.05);
             border-left: 3px solid var(--primary);
-            transform: translateX(5px);
         }
         
         .item-header {
-            margin-bottom: 12px;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            margin-bottom: 10px;
         }
         
-        .item-title {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: var(--light);
-        }
-        
-        .item-subtitle {
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 1em;
-            margin-top: 5px;
-        }
-        
+        .item-title { font-weight: 600; font-size: 1.1em; }
+        .item-subtitle { color: var(--primary); font-weight: 500; }
         .item-date {
             color: var(--secondary);
-            font-size: 0.9em;
-            font-weight: 500;
+            font-size: 0.85em;
             background: rgba(255, 101, 132, 0.1);
-            padding: 5px 12px;
+            padding: 4px 12px;
             border-radius: 20px;
-            white-space: nowrap;
-            margin-left: 15px;
         }
-        
-        .item-description {
-            margin-top: 12px;
-        }
-        
-        .item-description ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-        
-        .item-description li {
-            margin-bottom: 8px;
-            color: #ccc;
-            position: relative;
-        }
-        
-        .item-description li::marker {
-            color: var(--primary);
-        }
-        
+
         .tech-stack {
-            margin-top: 12px;
-            font-size: 0.9em;
+            margin-top: 15px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -337,135 +209,28 @@
         .tech-tag {
             background: rgba(108, 99, 255, 0.1);
             color: var(--primary);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            border: 1px solid rgba(108, 99, 255, 0.3);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            border: 1px solid rgba(108, 99, 255, 0.2);
         }
-        
-        .achievements-list {
-            margin-left: 20px;
-        }
-        
-        .achievements-list li {
-            margin-bottom: 15px;
-            color: #ccc;
-            position: relative;
-            padding-left: 10px;
-        }
-        
-        .achievements-list li::marker {
-            color: var(--primary);
-        }
-        
-        .achievements-list strong {
-            color: var(--light);
-        }
-        
-        .interests {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .interest-tag {
-            background: rgba(108, 99, 255, 0.1);
-            color: var(--primary);
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 0.9em;
-            border: 1px solid rgba(108, 99, 255, 0.3);
-            transition: var(--transition);
-        }
-        
-        .interest-tag:hover {
-            background: rgba(108, 99, 255, 0.2);
-            transform: translateY(-3px);
-        }
-        
-        .languages-table {
+
+        .languages-table, .interests-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
             background: rgba(255, 255, 255, 0.03);
             border-radius: 8px;
             overflow: hidden;
         }
         
-        .languages-table th, .languages-table td {
+        .languages-table th, .languages-table td, .interests-table td {
             padding: 12px;
-            text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .languages-table th {
-            background: rgba(108, 99, 255, 0.2);
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .interests-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .interests-table td {
-            padding: 12px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: var(--transition);
         }
-        
-        .interests-table td:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
+
         @media (max-width: 968px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                padding: 30px 25px;
-            }
-            
-            .main-content {
-                padding: 30px 25px;
-            }
-            
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .item-date {
-                margin-left: 0;
-                margin-top: 8px;
-            }
-        }
-        
-        @media print {
-            body {
-                background: white;
-            }
-            .container {
-                box-shadow: none;
-                max-width: 100%;
-                margin: 0;
-                grid-template-columns: 300px 1fr;
-            }
-            .sidebar {
-                background: #f5f5f5 !important;
-                color: #333;
-            }
-            .main-content {
-                background: white;
-                color: #333;
-            }
+            .container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -477,7 +242,7 @@
                     <img src="WhatsApp Image 2025-09-28 at 02.17.01_7a630f7d.jpg" alt="Vanessa Thandolwenkosi Fambarega">
                 </div>
                 <h1>Vanessa Thandolwenkosi Fambarega</h1>
-                <p class="subtitle">Student</p>
+                <p class="subtitle">BSc Computer Science Graduate</p>
             </div>
             
             <div class="sidebar-section">
@@ -492,7 +257,15 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>66 Alsation Street, Midrand, South Africa</span>
+                    <span>Midrand, Gauteng, South Africa</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://vanessa-tf.github.io" target="_blank">vanessa-tf.github.io</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Vanessa-tf" target="_blank">github.com/Vanessa-tf</a>
                 </div>
             </div>
             
@@ -500,13 +273,19 @@
                 <h3>Technical Skills</h3>
                 <ul class="skill-list">
                     <li>
-                        <span>Programming: C++, Java(Intermediate), Python(Intermediate), HTML, CSS, JavaScript, PHP, MySQL</span>
+                        <span><strong>Programming:</strong> C#, Java (OOP), Python, PHP, JavaScript, TypeScript, C++, HTML/CSS, SQL</span>
                     </li>
                     <li>
-                        <span>Tools & Platforms: Arduino, Raspberry Pi, Cisco Packet Tracer, IntelliJ IDEA, NetBeans, Git/GitHub, MySQL Workbench</span>
+                        <span><strong>Frameworks/Tools:</strong> React (Vite), Node.js, Express, Docker, Git/GitHub, IntelliJ, NetBeans</span>
                     </li>
                     <li>
-                        <span>Other: Microsoft Office Suite</span>
+                        <span><strong>Cloud & DB:</strong> Google Cloud Platform (GCP), Firebase, Supabase, MySQL, PostgreSQL, MongoDB</span>
+                    </li>
+                    <li>
+                        <span><strong>Hardware/IoT:</strong> Arduino, Raspberry Pi</span>
+                    </li>
+                    <li>
+                        <span><strong>Networking:</strong> Cisco Packet Tracer, TCP/IP, Routing & Switching</span>
                     </li>
                 </ul>
             </div>
@@ -514,17 +293,11 @@
             <div class="sidebar-section">
                 <h3>Languages</h3>
                 <table class="languages-table">
-                    <tr>
-                        <th>English</th>
-                        <th>Zulu</th>
-                    </tr>
-                    <tr>
-                        <td>Native</td>
-                        <td>Native</td>
-                    </tr>
+                    <tr><th>English</th><th>Zulu</th></tr>
+                    <tr><td>Native</td><td>Native</td></tr>
                 </table>
             </div>
-            
+
             <div class="sidebar-section">
                 <h3>Soft Skills</h3>
                 <ul class="skill-list">
@@ -538,8 +311,49 @@
         
         <main class="main-content">
             <section class="main-section">
-                <h2><i class="fas fa-user"></i> About Me</h2>
-                <p class="about">I am a Computer Science student pursuing a BSc degree at Eduvos, passionate about technology, programming, and problem-solving. I have practical experience with IoT-based systems, networking, and full-stack web development, alongside strong organizational and communication skills. I am eager to apply my knowledge in real-world settings, grow through mentorship, and contribute to innovative solutions within the tech and telecommunications industry.</p>
+                <h2><i class="fas fa-user"></i> Profile</h2>
+                <p class="about">Hands-on experience in data-driven software development and business problem-solving, including IoT sensor networks with real-time data analytics, full-stack web applications with database optimization, and network infrastructure configuration. Seeking to apply technical and analytical skills in consulting environments to help organizations solve complex challenges through innovative, data-led solutions.</p>
+            </section>
+
+            <section class="main-section">
+                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Vacation Voluntary Work</div>
+                            <div class="item-subtitle">BBD Software</div>
+                        </div>
+                        <div class="item-date">12/2025 - 01/2026</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li><strong>Full-Stack Development:</strong> Built and deployed features using React (Vite), TypeScript, and Node.js. Integrated Firebase and Supabase for real-time database management and authentication.</li>
+                            <li><strong>Cloud Integration:</strong> Worked with Google Cloud Platform to handle backend services and application hosting.</li>
+                            <li><strong>Technical Upskilling:</strong> Learned and implemented Docker for containerization and used advanced Git workflows to manage code versions.</li>
+                            <li><strong>Team Participation:</strong> Gained experience in professional communication and keeping stakeholders updated during daily stand-ups and team sprints.</li>
+                            <li><strong>Problem Solving:</strong> Worked through pair-programming sessions to find and fix bugs in existing code.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Part-Time Administrative Assistant</div>
+                            <div class="item-subtitle">SieArt Media</div>
+                        </div>
+                        <div class="item-date">11/2022 - 01/2023</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Tasks:</p>
+                        <ul>
+                            <li>Streamlined administrative tasks, including email management, scheduling, and file organization</li>
+                            <li>Improved accessibility of key documents through effective organization</li>
+                            <li>Adapted to fluctuating workloads by supporting multiple concurrent projects under tight deadlines</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             
             <section class="main-section">
@@ -550,17 +364,52 @@
                             <div class="item-title">BSC in Computer Science</div>
                             <div class="item-subtitle">Eduvos</div>
                         </div>
-                        <div class="item-date">02/2023 - Present</div>
+                        <div class="item-date">02/2023 - 12/2025</div>
                     </div>
                     <div class="item-description">
                         <p>Midrand, South Africa</p>
+                        <p style="margin-top:10px;"><strong>Key Modules:</strong> Object Oriented Programming, Data Structures & Algorithms, Advanced Network Security, AI Techniques, IT Project Management, Software Design, Web Development.</p>
                     </div>
                 </div>
             </section>
             
             <section class="main-section">
-                <h2><i class="fas fa-laptop-code"></i> Personal Projects</h2>
+                <h2><i class="fas fa-laptop-code"></i> Projects</h2>
                 
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Learning Management System (Capstone Project)</div>
+                        <div class="item-date">2025</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Developed a scalable LMS for matric rewrite students with comprehensive analytics and business intelligence features.</li>
+                            <li>Built student progress tracking with real-time performance dashboards and data visualizations.</li>
+                            <li>Designed database-driven architecture supporting multi-user access with query optimization for 50+ concurrent users.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">"Small Streets" C2C E-Commerce Website</div>
+                        <div class="item-date">2025</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Built a marketplace for the South African market with localized payment solutions based on market research.</li>
+                            <li>Implemented user registration, product listings, cart system, and admin dashboard.</li>
+                            <li>Built data visualization tools to monitor platform performance metrics.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span><span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-item">
                     <div class="item-header">
                         <div class="item-title">Smart House System (Arduino)</div>
@@ -568,14 +417,12 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Designed and built a smart house prototype using Arduino from scratch</li>
-                            <li>Integrated motion and temperature sensors, automated lighting, and real-time monitoring</li>
-                            <li>Applied IoT concepts and hardware-software integration</li>
+                            <li>Designed automated home prototype with comprehensive sensor data collection and analytics.</li>
+                            <li>Integrated motion and temperature sensors with real-time monitoring dashboards.</li>
+                            <li>Analyzed sensor data trends to optimize lighting control and reduce energy consumption.</li>
                         </ul>
                         <div class="tech-stack">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Arduino</span><span class="tech-tag">IoT</span><span class="tech-tag">C++</span>
                         </div>
                     </div>
                 </div>
@@ -587,14 +434,11 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Developed a temperature logging and monitoring application using Raspberry Pi and Python</li>
-                            <li>Showcased IoT, Python programming, and data analysis skills</li>
-                            <li>Configured sensors for real-time data collection and visualization</li>
+                            <li>Developed a temperature logging application using Raspberry Pi and Python.</li>
+                            <li>Configured sensors for real-time data collection and visualization.</li>
                         </ul>
                         <div class="tech-stack">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">IoT</span>
+                            <span class="tech-tag">Raspberry Pi</span><span class="tech-tag">Python</span><span class="tech-tag">IoT</span>
                         </div>
                     </div>
                 </div>
@@ -606,84 +450,23 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Configured routers, switches, and end devices to simulate real-world networks</li>
-                            <li>Applied networking concepts in practical lab simulations</li>
-                            <li>Practiced subnetting, routing, switching, and troubleshooting</li>
+                            <li>Configured routers, switches, and end devices to simulate real-world networks.</li>
+                            <li>Practiced subnetting, routing (TCP/IP), switching, and troubleshooting.</li>
                         </ul>
                         <div class="tech-stack">
-                            <span class="tech-tag">Cisco Packet Tracer</span>
-                            <span class="tech-tag">Networking</span>
+                            <span class="tech-tag">Cisco Packet Tracer</span><span class="tech-tag">Networking</span>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="item-header">
-                        <div class="item-title">"Small Streets" Beginner C2C E-Commerce Website (PHP, MySQL, JavaScript)</div>
-                        <div class="item-date">2025</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Built a consumer-to-consumer online marketplace inspired by Redbubble/Etsy, localized for South Africa</li>
-                            <li>Prioritized clean design, secure coding, and localization</li>
-                            <li>Bootstrap, implemented user registration, product listings, cart system, order placement, and admin dashboard</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="item-header">
-                        <div class="item-title">Final Project (In Progress)</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Developing a scalable, database-driven LMS for South African matric rewrite students using PHP, MySQL, HTML, CSS, and JavaScript, integrating e-learning, live lessons, mock exams, and e-commerce</li>
-                        </ul>
-                        <div class="tech-stack">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="main-section">
-                <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Part-Time Administrative Assistant</div>
-                            <div class="item-subtitle">SieArt Media</div>
-                        </div>
-                        <div class="item-date">11/2022 - 01/2023</div>
-                    </div>
-                    <div class="item-description">
-                        <p>Tasks</p>
-                        <ul>
-                            <li>Streamlined administrative tasks, including email management, scheduling, and file organization</li>
-                            <li>Improved accessibility of key documents through effective organization</li>
-                            <li>Adapted to fluctuating workloads by supporting special projects when needed</li>
-                        </ul>
                     </div>
                 </div>
             </section>
             
             <section class="main-section">
                 <h2><i class="fas fa-trophy"></i> Achievements</h2>
-                <ul class="achievements-list">
-                    <li>Recognized as a Top Achiever in: Project Management (ITPMA2-B33) – 2024 Block 3 and Artificial Intelligence (ITAIA2-B33) – 2024 Block 3</li>
-                    <li>Golden Key Membership (In Progress)</li>
+                <ul class="achievements-list" style="margin-left: 20px;">
+                    <li style="margin-bottom: 10px;"><strong>Top Academic Performer:</strong> Project Management (ITPMA2-B33) – 2024 Block 3</li>
+                    <li style="margin-bottom: 10px;"><strong>Top Academic Performer:</strong> Artificial Intelligence (ITAIA2-B33) – 2024 Block 3</li>
+                    <li style="margin-bottom: 10px;"><strong>Golden Key International Honor Society:</strong> Invited member 2025</li>
+                    <li style="margin-bottom: 10px;"><strong>Coding Club:</strong> Active member (2024-2025)</li>
                 </ul>
             </section>
             
@@ -699,7 +482,6 @@
                         <td>Exploring new technologies</td>
                         <td>Attending network sessions/AI summits</td>
                         <td>Driving</td>
-                        <td></td>
                     </tr>
                 </table>
             </section>
