@@ -10,19 +10,18 @@
   </head>
   <body>
 
-    <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
       <div class="logo">Vanessa Fambarega</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- HAMBURGER NAV -->
     <nav id="hamburger-nav">
       <div class="logo">Vanessa Fambarega</div>
       <div class="hamburger-menu">
@@ -34,6 +33,7 @@
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#events" onclick="toggleMenu()">Events</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -41,7 +41,6 @@
       </div>
     </nav>
 
-    <!-- HERO / PROFILE -->
     <section id="profile">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.jpeg" alt="Vanessa Fambarega profile picture" />
@@ -75,7 +74,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -89,11 +87,13 @@
               <img src="./assets/experience.png" alt="Experience icon" class="icon" />
               <h3>Experience</h3>
               <p>BBD Software<br />Vacation Work (2025–2026)</p>
+              <p>Colmin Group<br />Freelance Web Development</p>
             </div>
             <div class="details-container">
               <img src="./assets/education.png" alt="Education icon" class="icon" />
               <h3>Education</h3>
               <p>B.Sc. Computer Science<br />Eduvos (2025)</p>
+              <p>Top Academic Performer:<br />Artificial Intelligence and Project Management</p>
             </div>
           </div>
           <div class="text-container">
@@ -111,7 +111,6 @@
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
 
-    <!-- EXPERIENCE / SKILLS -->
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -180,10 +179,48 @@
 
         </div>
       </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#certifications'" />
+    </section>
+
+    <section id="certifications">
+      <p class="section__text__p1">My Credentials</p>
+      <h1 class="title">Certifications</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Earned</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div>
+                  <h3>Microsoft 365 Certified: Copilot and Agent Administration Fundamentals</h3>
+                  <p>September 2026</p>
+                  <p>Credential ID: ED98D6C25AAA698A</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Currently Pursuing</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div><h3>DP-900</h3><p>Microsoft Azure Data Fundamentals</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div><h3>DP-700</h3><p>Microsoft Fabric Data Engineer Associate</p></div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -272,18 +309,53 @@
             </div>
           </div>
 
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-5.PNG" alt="KGL Electrical" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">KGL Electrical</h2>
+            <p class="project-desc">Business website built and managed for KGL Electrical.</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://kgl-electrical.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-6.PNG" alt="Wedding invitation website" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Wedding Invitation Site</h2>
+            <p class="project-desc">Digital roora (wedding) invitation website with event details.</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://rooradec27.netlify.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <h2 class="experience-sub-title project-title">Online Auction Platform</h2>
+            <p class="project-desc">Online bidding platform currently under construction. Live demo coming soon.</p>
+          </div>
+
         </div>
       </div>
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#events'" />
     </section>
 
-    <!-- EVENTS / HACKATHONS -->
     <section id="events">
       <p class="section__text__p1">My Tech Journey</p>
       <h1 class="title">Events &amp; Hackathons</h1>
       <div class="events-grid">
 
-        <!-- EVENT CARD 1 -->
         <div class="event-card">
           <div class="event-img-container">
             <img src="./assets/NEIT2791.jpg" alt="RMB GirlCode Hackathon 2026" class="event-img" />
@@ -291,29 +363,50 @@
           </div>
           <div class="event-info">
             <h3 class="event-title">RMB GirlCode Hackathon 2026</h3>
-            <p class="event-date">📅 March 2026</p>
+            <p class="event-date">📅 18 to 19 March 2026</p>
             <p class="event-desc">Competed in the RMB GirlCode Hackathon, building a compliance dashboard using Python and PostgreSQL.</p>
           </div>
         </div>
 
-        <!-- EVENT CARD 2 -->
         <div class="event-card">
           <div class="event-img-container">
-            <img src="./assets/WESEEHERINAI.jpg" alt="Event Name" class="event-img" />
+            <img src="./assets/WESEEHERINAI.jpg" alt="WESEEHERINAI GirlCode and Cell C" class="event-img" />
             <span class="event-badge">Bootcamp</span>
           </div>
           <div class="event-info">
-            <h3 class="event-title">WESEEHERINAI Girlcode|Cell C</h3>
+            <h3 class="event-title">WESEEHERINAI GirlCode | Cell C</h3>
             <p class="event-date">📅 May 2026</p>
-            <p class="event-desc">GirlCode in collaboration with Cell C gave me the opportunity to network and learn from industry professionals from Cell C giving out Microsft Certification vouchers and weekly lessons to assist in the AI900 Microsoft AI Fundamentals course.</p>
+            <p class="event-desc">GirlCode, in collaboration with Cell C, gave me the opportunity to network with and learn from industry professionals. Cell C provided Microsoft Certification vouchers and weekly lessons to support the AI-900 Microsoft AI Fundamentals course.</p>
           </div>
         </div>
 
       </div>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Other Tech Events</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div><h3>AWS Summit</h3><p>Attended</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div><h3>TechnoAfrika</h3><p>Volunteered</p></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="checkmark" class="icon" />
+                <div><h3>And other tech community events</h3><p>Attended</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -339,10 +432,9 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
 
-      <p>Copyright &#169; 2025 Vanessa Fambarega. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Vanessa Fambarega. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
