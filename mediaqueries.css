@@ -110,4 +110,8 @@
   .event-img-container {
     height: 160px;
   }
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+  }
+}
 }
