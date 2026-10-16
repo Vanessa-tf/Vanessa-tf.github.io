@@ -1,5 +1,3 @@
-/* GENERAL */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -45,7 +43,7 @@ a,
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
@@ -298,6 +296,8 @@ section {
 
 #about {
   position: relative;
+  height: fit-content;
+  padding-bottom: 6rem;
 }
 
 .about-containers {
@@ -338,6 +338,11 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
+}
+
+/* NEW: lets the About container grow with its content */
+#about .section-container {
+  height: auto;
 }
 
 .section__pic-container {
@@ -385,10 +390,30 @@ article .icon {
   cursor: default;
 }
 
+
+#certifications {
+  position: relative;
+  height: fit-content;
+  padding-bottom: 6rem;
+}
+
+#certifications article {
+  width: 100%;
+  max-width: 22rem;
+}
+
 /*  PROJECTS SECTION  */
 
 #projects {
   position: relative;
+  height: fit-content;
+  padding-bottom: 6rem;
+}
+
+#projects .about-containers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .color-container {
@@ -424,6 +449,11 @@ article .icon {
   position: relative;
   height: fit-content;
   padding-bottom: 4rem;
+}
+
+#events article {
+  width: auto;
+  min-width: 10rem;
 }
 
 .events-grid {
